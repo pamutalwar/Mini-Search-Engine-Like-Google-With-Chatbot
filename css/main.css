@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        /* Container for the circular image */
+        .circle-image-container {
+            text-align: center;
+        }
+        
+        /* Styling for the circular image */
+        .circle-image {
+          
+          width: 10%;
+    padding-top: 152px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the entire circular area */
+            
+            .container{
+              margin-top: -64px;
+            }
+        }
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.alert {
+  padding: 0.5rem;
+}
+
+.form-wrap h1,
+.form-wrap .form-label {
+  font-weight: 600;
+}
+.rounded {
+  border-radius: var(--bs-border-radius) !important;
+  margin-top: -125px;
+}

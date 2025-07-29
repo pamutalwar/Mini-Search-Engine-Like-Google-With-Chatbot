@@ -1,0 +1,151 @@
+*{
+    margin :0px;
+    padding : 0px;
+    box-sizing : border-box;
+    font-family: sans-serif;  
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+}
+
+article {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+aside {
+  flex: 1;
+  background-color: #ccc;
+  padding: 1px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: auto;
+}
+/* Search box styles */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width:500px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  padding: 0px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 0 6px 6px 0;
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
+/* Animation styles */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-btn {
+  background: linear-gradient(-45deg, #ff9d6c, #ff6a95, #5d9cec, #5db7ec);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+#gobtn
+{
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid green;
+}
+#gobtn:hover
+{
+    color: white;
+    background-color: green;
+    
+}
+a
+{
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav
+{ 
+    background-color:rgb(255 244 238);
+}
+
+
+/*  search box */
+.flex-div{
+display: flex;
+}
+.nav-middle{
+justify-content: center;
+}
+
+.nav-middle .search-box{
+border: 1px solid #ccc;
+background-color: white;
+padding:8px 15px;
+border-radius: 25px;
+
+
+}
+.nav-middle .search-box input{
+width: 500px;
+border: 0;
+outline: 0;
+background: transparent;
+}
+.nav-middle .search-box img{
+padding-top: 1px;
+width: 15px;
+height: 20px;
+}
+.nav-middle .pamu{
+width: 50px;
+}
+

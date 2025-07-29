@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Search box styles */
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px 0 0 6px;
+      border: none;
+      outline: none;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 0 6px 6px 0;
+      border: none;
+      outline: none;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Animation styles */
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-btn {
+      background: linear-gradient(-45deg, #ff9d6c, #ff6a95, #5d9cec, #5db7ec);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search">
+    <button class="search-button animated-btn">Go</button>
+  </div>
+</body>
+</html>

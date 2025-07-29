@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Search Engine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #search-box {
+      width: 400px;
+      height: 30px;
+      font-size: 16px;
+    }
+
+    #search-button {
+      height: 30px;
+      font-size: 16px;
+    }
+
+    #search-results {
+      margin-top: 20px;
+    }
+
+    .result {
+      margin-bottom: 10px;
+    }
+
+    .result-title {
+      font-weight: bold;
+    }
+
+    .result-url {
+      color: #006621;
+    }
+  </style>
+  <script>
+    function search() {
+      var query = document.getElementById("search-box").value;
+      // Here you would implement your search algorithm to retrieve relevant results based on the query.
+      // In this example, we'll simulate the search results with a static array.
+      var results = [
+        { title: "Result 1", url: "https://www.example.com/result1" },
+        { title: "Result 2", url: "https://www.example.com/result2" },
+        { title: "Result 3", url: "https://www.example.com/result3" }
+      ];
+
+      var searchResults = document.getElementById("search-results");
+      searchResults.innerHTML = "";
+
+      for (var i = 0; i < results.length; i++) {
+        var result = results[i];
+        var resultElement = document.createElement("div");
+        resultElement.classList.add("result");
+
+        var titleElement = document.createElement("a");
+        titleElement.classList.add("result-title");
+        titleElement.textContent = result.title;
+        titleElement.href = result.url;
+
+        var urlElement = document.createElement("a");
+        urlElement.classList.add("result-url");
+        urlElement.textContent = result.url;
+        urlElement.href = result.url;
+
+        resultElement.appendChild(titleElement);
+        resultElement.appendChild(document.createElement("br"));
+        resultElement.appendChild(urlElement);
+
+        searchResults.appendChild(resultElement);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>My Search Engine</h1>
+
+  <input type="text" id="search-box" placeholder="Enter your search query">
+  <button type="button" id="search-button" onclick="search()">Search</button>
+
+  <div id="search-results"></div>
+</body>
+</html>

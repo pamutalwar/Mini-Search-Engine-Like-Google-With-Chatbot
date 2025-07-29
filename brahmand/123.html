@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Animation styles */
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-btn {
+      background: linear-gradient(-45deg, #ff9d6c, #ff6a95, #5d9cec, #5db7ec);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+  </style>
+</head>
+<body>
+   <a href="#" class="btn animated-btn">Click Me!</a>
+</body>
+</html>

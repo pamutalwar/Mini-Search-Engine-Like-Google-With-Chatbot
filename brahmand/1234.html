@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Section</title>
+    <style>
+        /* Styles for the main button */
+        .main-btn {
+            margin-left: 1000px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Styles for the dropdown options */
+        .dropdown-buttons {
+            margin-left: 1000px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure dropdown is on top */
+        }
+
+        /* Styles for the dropdown links */
+        .dropdown-buttons a {
+            
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-buttons a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn-container" style="position: relative; display: inline-block;">
+        <!-- Main button -->
+        <button id="main-btn" class="main-btn">More</button>
+
+        <!-- Dropdown options -->
+        <div id="dropdown-buttons" class="dropdown-buttons">
+            <a href="#" class="dropdown-link">Profile</a>
+            <a href="#" class="dropdown-link">Logout</a>
+        </div>
+    </div>
+
+    <script>
+        // Get the main button and dropdown buttons elements
+        const mainBtn = document.getElementById('main-btn');
+        const dropdownButtons = document.getElementById('dropdown-buttons');
+        
+        // Event listener to toggle the dropdown when the main button is clicked
+        mainBtn.addEventListener('click', (e) => {
+            // Stop the event from bubbling up
+            e.stopPropagation();
+            // Toggle the visibility of the dropdown buttons
+            dropdownButtons.style.display = dropdownButtons.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Event listener to hide the dropdown when clicking outside the container
+        document.addEventListener('click', (e) => {
+            // Check if the click target is not the button or the dropdown container
+            if (!mainBtn.contains(e.target) && !dropdownButtons.contains(e.target)) {
+                dropdownButtons.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
